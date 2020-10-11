@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">             
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+	<title>шаблон</title>
+	<!-- <link rel="stylesheet" href="css/custom-bootstrap.css"> -->
+	<!-- <link rel="stylesheet" href="css/swiper.css"> -->
+	
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	
+	
+<svg  style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-facebook" viewBox="0 0 16 28">
+<title>facebook</title>
+<path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
+</symbol>
+</svg>
+	
+	
+<header class="head">
+	<div class="head__content container">
+		
+	
+
+	</div>
+</header>
+
+<main class="main">
+	<div class="container">
+		<div class="row">
+			<div class="title">
+				<button class="btn_off_all">off all</button>
+				<button class="btn_on_all">on all</button>
+				<span class="title_singl">Frozen - Madonna</span>
+			</div>
+
+			<div class="line">
+				<button class="btn_on">off / on</button>
+				<audio controls><source src="audio/1.mp3"></audio>
+				<div class="text">You only see what your eyes want to see <span>[ ju ˈəʊnli ˈsi: ˈwɒt jɔ:r aɪz wɒnt tu ˈsi: ]</span></div>
+			</div>
+			<div class="line">
+				<button class="btn_on">off / on</button>
+				<audio controls><source src="audio/2.mp3"></audio>
+				<div class="text">How can life be what you want it to be? You're frozen, <span>[ ˈhaʊ kən laɪf bi ˈwɒt ju wɒnt ɪt tu biˈ jɔ: ˈfrəʊzən, ]</span></div>
+			</div>
+			<div class="line">
+				<button class="btn_on">off / on</button>
+				<audio controls><source src="audio/3.mp3"></audio>
+				<div class="text"> when your heart's not open <span>[ wen  jɔ:r ˈhɑ:rts  nɒt ˈəʊpənˈ ]</span></div>
+			</div>
+			<!-- <div class="line">
+				<button class="btn_on">off / on</button>
+				<audio controls><source src="audio/1.mp3"></audio>
+				<div class="text"> <span>ˈ</span></div>
+			</div>
+			<div class="line">
+				<button class="btn_on">off / on</button>
+				<audio controls><source src="audio/1.mp3"></audio>
+				<div class="text"> <span>ˈ</span></div>
+			</div> -->
+
+		</div> 
+	</div>
+</main>
+
+
+<script>
+	var btn_off_all = document.querySelector('.btn_off_all');
+	var btn_on_all = document.querySelector('.btn_on_all');
+	var text = document.querySelectorAll('.text');
+
+	btn_off_all.addEventListener('click', function (e) {
+		for (let i = 0; i < text.length; i++) {
+			text[i].classList.add('off');
+		}
+	});
+	btn_on_all.addEventListener('click', function (e) {
+		for (let i = 0; i < text.length; i++) {
+			text[i].classList.remove('off');
+		}
+	});
+	var elem = document.querySelectorAll('.btn_on');
+	for (let i = 0; i < elem.length; i++) {
+		var el = elem[i];
+		el.addEventListener('click', function (e) {
+			// this.nextElementSibling.classList.toggle('off');
+			this.parentElement.querySelector('.text').classList.toggle('off');
+		});
+	}
+</script>
+
+	
+
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="js/jquery.min.js"></script>
+<!-- <script src="js/ofi.min.js"></script>  -->
+<!-- <script src="js/swiper.min.js"></script> -->
+<!-- <script src="js/accordion.js"></script> -->
+<!-- <script src="js/utils.js"></script> -->
+<!-- <script src="js/dialog.js"></script> -->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

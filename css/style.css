@@ -1,0 +1,341 @@
+@font-face {
+	font-family: Gilroy;
+	src: url(../fonts/Gilroy-Heavy.woff);
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: ;
+	src: url(../fonts/.woff);
+	font-weight: 00;
+}
+
+@font-face {
+	font-family: ;
+	src: url(../fonts/.woff);
+	font-weight: 00;
+}
+
+@font-face {
+	font-family: ;
+	src: url(../fonts/.woff);
+	font-weight: 00;
+	font-style: italic;
+}
+
+/* reset */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+nav,
+footer,
+header,
+aside,
+main,
+section {
+	display: block;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+	background-color: transparent;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+a,
+button {
+	color: inherit;
+}
+
+button:focus,
+a:focus {
+	/* box-shadow: 0 0 0 3px lightskyblue; */
+}
+
+button:focus.focus,
+a:focus.focus {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+
+input:focus {
+	box-shadow: 0 0 0 3px #f2f5f8;
+	background-color: #ffffff;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "Segoe UI", Arial, sans-serif;
+	line-height: 1.3;
+	font-size: 18px;
+	/* color: #1c293a; */
+	padding: 10px;
+}
+
+.icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+.title_1 {}
+
+.title_2 {}
+
+@media (min-width: 768px) {
+	.title_1 {
+		font-size: 50px;
+	}
+
+	.title_2 {
+		margin-bottom: 40px;
+		font-size: 40px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.title_1 {
+		font-size: 60px;
+	}
+
+	.title_2 {
+		font-size: 50px;
+	}
+}
+
+.head {
+	padding: 10px;
+}
+
+.head__content {
+	display: flex;
+}
+
+
+
+.menu {
+	margin-bottom: 40px;
+	background-color: #fd8904;
+}
+
+@media (min-width: 540px) {
+	.menu {
+		/* position: relative; */
+		display: flex;
+	}
+}
+
+.menu li {
+	position: relative;
+	width: 150px;
+}
+.menu > li:not(:last-child) {
+border-right: 1px solid #000;
+}
+
+@media (pointer: fine),
+(min-width:0\0) {
+	.menu>li:hover {
+		color: #ffffff;
+		background-color: #faba95;
+	}
+
+	.menu li:hover>.menu_drop {
+		display: block;
+	}
+}
+
+.menu a {
+	display: block;
+	padding: 10px;
+}
+
+.menu a.active {
+	background-color: #b3b3b3;
+}
+
+[data-drop]:after {
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	/* width: 0; */
+	/* height: 0; */
+	border-top: 7px solid #000;
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
+}
+
+[data-drop].active:after {
+	transform: rotate(180deg);
+}
+
+
+/* ===== 2 level ===== */
+
+.menu_drop {
+	display: none;
+	width: 100%;
+	color: #000;
+	background-color: #bd6e40;
+}
+
+@media (min-width: 540px) {
+	.menu_drop {
+		position: absolute;
+		top: 100%;
+		left: 0px;
+		margin-top: 0px;
+	}
+}
+
+.menu_drop.show {
+	display: block;
+}
+
+.menu_drop li {
+	position: relative;
+}
+
+@media (pointer: fine),
+(min-width:0\0) {
+	.menu_drop > li:hover {
+		color: #fff;
+		background-color: #000;
+	}
+}
+
+.menu_drop a {
+	padding-left: 30px;
+
+}
+
+/* ===== 3 level ===== */
+
+.menu_drop ul {
+	top: 0;
+	left: 100%;
+}
+
+
+
+
+
+
+
+/* https://www.toptal.com/developers/css/sprite-generator */
+
+
+/* можно на body если head,footer не шире чем main */
+/* .wrap { */
+.main {
+	/* max-width: 1920px; */
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.title {
+	margin-bottom: 30px;
+}
+.title_singl {
+	font-weight: 700;
+}
+
+.line {
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	margin-bottom: 20px;
+}
+audio {
+	
+}
+.text {
+	width: 100%;
+	font-weight: 700;
+}
+.text span {
+	margin-left: 40px;
+	font-weight: 400;
+}
+button {
+	margin-right: 50px;
+	padding: 5px 10px;
+	border: 1px solid #000;
+}
+.btn_on {
+}
+.text {
+	margin-top: 20px;
+	/* opacity: 1; */
+}
+.text.off {
+	/* opacity: 0; */
+	display: none;
+}
